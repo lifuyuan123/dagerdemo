@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.atmf.daggerdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- android:hardwareAccelerated="false"  硬件加速   这里再共享动画必须开启才可以  不然没办法动画 -->
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.TwoActivity" />
+        <activity android:name=".activity.ThreeActivity" />
+        <activity android:name=".activity.FourActivity" />
+        <activity android:name=".activity.FiveActivity" />
+        <activity android:name=".activity.SubComponentntActivity" />
+        <activity android:name=".activity.RxActivity" />
+        <activity android:name=".activity.WebActivity" />
+        <activity android:name=".activity.ViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SpiderActivity" />
+        <activity android:name=".activity.SerchActivity" />
+        <activity android:name=".activity.CanvasPictureActivity" />
+        <activity android:name=".activity.SlideConflictActivity" />
+        <activity android:name=".activity.PhysicsActivity" />
+        <activity android:name=".activity.BinderActivity" />
+
+        <service
+            android:name=".server.CalcPlusService"
+            android:process=":server">
+            <intent-filter>
+                <action android:name="asdfsdfsdfasdf" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.SharedActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+
+        <activity android:name=".activity.HtlmTextActivity" />
+        <activity android:name=".activity.CalendarActivity" />
+        <activity android:name=".activity.TrillActivity" />
+        <activity android:name=".activity.MZBannerActivity" />
+        <activity
+            android:name=".activity.MDActivity"
+            android:label="我的标题" />
+        <activity android:name=".activity.ShowPicturesActivity" />
+        <activity android:name=".activity.ScrollActivity" />
+
+        <service android:name=".server.TestsService" />
+
+        <activity android:name=".activity.RouandActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="0dp">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:collapsedTitleGravity="center"
+        app:collapsedTitleTextAppearance="?android:attr/textAppearanceMedium"
+        app:expandedTitleTextAppearance="?android:attr/textAppearanceMedium"
+        app:expandedTitleGravity="left|bottom"
+        app:expandedTitleMarginBottom="40px"
+        app:expandedTitleMarginStart="40px"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:statusBarScrim="@android:color/transparent">
+        <!--下拉最大高度布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="224px"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="true"
+            android:tag="overScroll"
+            app:layout_collapseMode="parallax"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="112px"
+            android:layout_marginRight="20px"
+            app:contentInsetStart="0dp"
+            app:layout_collapseMode="pin"/>
+
+        <!--返回键    app:layout_collapseMode="pin"代表不跟着滑动-->
+        <LinearLayout
+            android:layout_width="112px"
+            android:layout_height="112px"
+            android:gravity="center_vertical"
+            app:layout_collapseMode="pin">
+            <ImageView
+                android:layout_width="40px"
+                android:layout_height="32px"
+                android:layout_marginLeft="40px"
+                android:src="@drawable/public_return_two" />
+        </LinearLayout>
+
+        <!--右标题控件-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="112px"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            app:layout_collapseMode="pin">
+
+            <!--右标题点击控件-->
+            <LinearLayout
+                android:id="@+id/lin_right_title"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:id="@+id/tv_right_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="辅标题"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--右标题图标点击控件-->
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/lin_iv_right_title"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/iv_right_title"
+                    android:layout_width="40px"
+                    android:layout_height="32px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="40px"
+                    android:src="@drawable/public_return_two" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+</android.support.design.widget.AppBarLayout>
